@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="STYEL.CSS" />
+
+    <title>PROJECT BUDGET ESTIMATION </title>
+  </head>
+  <body>
+    <div class="mian">
+      <h1 class="ror">PROJECT BUDGET ESTIMATION <img src="https://login.salesforce.com/img/logo214.svg" alt=""></h1>
+      <form>
+        <label for="budget" class="label">Budget:</label>
+        <input
+          type="number"
+          class="budget"
+          placeholder="Enter your budget"
+          required
+        />
+      
+
+  <label class="selects" for="currency">Select Currency: </label>
+  <select id="currency" onclick="setCurrency(this.value)">
+    <option class="option" value="INR" selected>INR</option>
+    <option value="USD">USD</option>
+  </select>
+       
+        <br /><br />
+        <label for="teamCount" class="label">Number of Team Members:</label>
+        <input
+          type="number"
+          class="teamCount"
+          placeholder="Enter team count"
+          required 
+        />
+        <!-- <br /><br /> -->
+        <button type="button" onclick="table()" class="createBTN">Create  Tabel</button>
+     
+      </form>
+
+      <br />
+      <div class="tableContainer">
+      </div>
+      <button class="Next-row-button" type="button" onclick="nextTBL()" style="display: none;">Create Next Row</button>
+      <div class="calculator">
+       
+
+     
+
+        <div class="p_container">
+          <h3>Calculate Total Hours</h3>
+          <button type="button" onclick="totaltime()" class="bt" >Click Now</button>
+          <button type="button" onclick="AddTask()" class="bt"  style=" display: none;" ></button>
+          <button type="button" value="Export" onclick="PDF()" class="bt"> Generate PDF</button>
+          <p class=" para"></p>
+          <p class=" para1"></p>
+        </div>
+   
+
+     
+      </div>
+<div class="container">
+</div>
+    </div>
+    <script src="APP.JS"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.22/jspdf.plugin.autotable.min.js"></script>
+
+    </script> 
+  </body>
+
+
+</html> 
